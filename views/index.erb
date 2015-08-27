@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900,800' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open Sans' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <!-- mike sucks @ tf2 -->
+  </head>
+  <body>
+    <div class="nav" href="http://niceme.me">
+      <a href="http://html5-115835.nitrousapp.com:4567/">
+        <img class="logo" src="img/2L1T-logoW.png">
+      </a>
+      <img class="user-button" src="img/2L1T-userO.png">
+      <li class="drop">Sort Order
+        <ul>
+          <li><a href="http://www.unitymedia.de">Top All Time</a></li>
+          <li><a href="http://www.unitymedia.de">Top 24 Hours</a></li>
+          <li><a href="http://www.unitymedia.de">Newest</a></li>
+          <li><a href="http://www.unitymedia.de">Oldest</a></li>
+        </ul>
+      </li>
+    </div>
+  
+    <div class="nav-spacer"></div>
+    
+    
+  <div class="content">
+    <div class="feed">
+      
+<!--       <% for i in 1..50 %>
+        <div class="post">
+          <h2>Title of post goes here</h2>
+          <ul>
+            <li>Truth/lie lorem ipsum cereal is a great source of iron but can be very sugary.</li>
+            <li>Truth/lie lorem ipsum cereal is a great source of iron but can be very sugary.</li>
+            <li>Truth/lie lorem ipsum cereal is a great source of iron but can be very sugary.</li>
+          </ul>
+        </div>
+      <% end %> -->
+
+      <% @posts.each do |post| %> 
+        <div class="post">
+          <h2>Anonymous</h2>
+          <ul>
+            <li><%=post.truth%></li>
+            <li><%=post.lie_one%></li>
+            <li><%=post.lie_two%></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <div class="side-content">
+      <div class="sidebar">
+        <h2>Button!!!</h2>
+        <p>Sometimes buttons need to be clicked. Your job is to click deez nutz</p>
+        <div class="btn-wrapper">
+          <a class="btn" id="new-post">Create dank post!</a>
+        </div>
+      </div>
+      <div class="sidebar">
+        <p>awdawudnfakesgiwujjaiugbaieu</p>
+        <p>AWJKnawdknwadkdnk !!!!!1one11ONE111!!!</p>
+        <p>Nicolette does medicore jobs</p>
+        <p> Mabel is more slick than Will </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="pop-up">
+    <div class="pop-up-form">
+      <form action="/new_post" method="POST" class="new-post">
+        <input type="text" name="lie_one" placeholder="your Lie here..."> <br>
+        <input type="text" name="lie_two" placeholder="your Lie here..."> <br>
+        <input type="text" name="truth" placeholder="your Truth here..."> <br>
+        <div class="btn-wrapper">
+          <a class="btn submit" type="submit" value="submit" style="background-color:#4caf50;box-shadow:0px 5px 0px #3d8d40">Submit</a>
+          <a class="btn cancel" style="background-color:#f44336;box-shadow:0px 5px 0px #d0352a;margin-right:20px;">Cancel</a>
+        </div>
+       </form>
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="js/pop-up.js"></script>
+  </body>
+</html>
